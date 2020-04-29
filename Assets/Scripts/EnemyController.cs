@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    private Vector3 startingPosition;
+    private Vector3 roamPosition;
     public Transform player;
     private Rigidbody2D rigidbody;
     private Vector2 movement;
@@ -16,6 +18,8 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         rigidbody = this.GetComponent<Rigidbody2D>();
+        startingPosition = transform.position;
+        roamPosition = getRoamingPosition();
     }
 
     // Update is called once per frame
@@ -51,6 +55,11 @@ public class EnemyController : MonoBehaviour
         {
             life--;
         }
+    }
+
+    private Vector3 getRoamingPosition()
+    {
+        return startingPosition + Utils.GetRandomDir() * Random.Range(10f, 70f);
     }
 
 }
