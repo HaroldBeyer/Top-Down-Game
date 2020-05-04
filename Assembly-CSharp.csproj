@@ -71,6 +71,8 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Shooting.cs" />
      <Compile Include="Assets\Scripts\Testing.cs" />
+     <Compile Include="Assets\Scripts\pathfinders\Pathfind.cs" />
+     <Compile Include="Assets\Scripts\pathfinders\Pathnode.cs" />
      <Compile Include="Assets\Scripts\utils\Grid.cs" />
      <Compile Include="Assets\Scripts\utils\Utils.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
@@ -311,6 +313,9 @@
  </Reference>
  <Reference Include="UnityEditor">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.8f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>D:/Projetos/Unity/Top Down/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.8f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -766,6 +771,18 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{5b63f27b-7fb2-d4d2-6295-6ba1278962b6}</Project>
       <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{ff22fda7-3a08-fdce-9079-c283a3e351f4}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{d01ad2b3-fee6-361f-3a88-bd5c64b197ad}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{5c88fedc-23ee-fc5f-41ea-a4788b9422c1}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

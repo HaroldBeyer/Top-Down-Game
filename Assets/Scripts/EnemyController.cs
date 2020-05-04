@@ -10,7 +10,6 @@ public class EnemyController : MonoBehaviour
     private Rigidbody2D rigidbody;
     private Vector2 movement;
     public float moveSpeed = 5f;
-
     public int life = 5;
 
 
@@ -25,6 +24,14 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (checkForPlayer())
+        {
+
+        }
+        else
+        {
+
+        }
         Vector3 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rigidbody.rotation = angle;
@@ -62,4 +69,26 @@ public class EnemyController : MonoBehaviour
         return startingPosition + Utils.GetRandomDir() * Random.Range(10f, 70f);
     }
 
+    private bool checkForPlayer()
+    {
+        // if (){
+        //     return true
+        // }
+        return false;
+    }
+
 }
+
+//posição inicial
+//visão 360 graus
+//visão seria interrompida por outros objetos
+//ou seja, precisaria criar algo pra determinar isso
+//
+//
+//
+//
+//
+//
+//
+//
+//

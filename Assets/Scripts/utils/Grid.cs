@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using CodeMonkey.Utils;
 
-public class Grid
+public class Grid<TGridObject>
 {
     private int width;
     private int height;
